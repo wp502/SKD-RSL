@@ -7,7 +7,7 @@ pip install -r requirements.txt
 ```
  
 ## Running
-1. Download the dataset from the original official website and place it in the data folder.
+1. Download the dataset from the corresponding official website and place it in the data folder.
 
 2. Start training with the instructions in the run_sh file.
 
