@@ -1,0 +1,23 @@
+#!/bin/bash
+
+# CALTECH256
+
+# 1
+# ResNet34_another - ResNet18_another 1-01_01
+python train_online.py --epochs 200 --lr_decay_epochs 60,120,160 --dataset caltech256 --num_class 256 --dataset_test_percent 0.25 --batch_size 64 --learning_rate 0.1 --lr_decay_rate 0.1 --models_list ResNet34_another ResNet18_another --distill kdcl --kd_T 2 -t contrast-2-01_01
+
+# 2
+# ResNet101_another - ResNet34_another 1-02_01
+python train_online.py --epochs 200 --lr_decay_epochs 60,120,160 --dataset caltech256 --num_class 256 --dataset_test_percent 0.25 --batch_size 64 --learning_rate 0.1 --lr_decay_rate 0.1 --models_list ResNet101_another ResNet34_another --distill kdcl --kd_T 2 -t contrast-2-02_01
+
+# 3
+# VGG13_BN_IMG - VGG8_BN_IMG
+python train_online.py --epochs 200 --lr_decay_epochs 60,120,160 --dataset caltech256 --num_class 256 --dataset_test_percent 0.25 --batch_size 64 --learning_rate 0.1 --lr_decay_rate 0.1 --models_list VGG13_BN_IMG VGG8_BN_IMG --distill kdcl --kd_T 2 -t contrast-2-03_01
+
+# 4
+# ResNet34_another - ShuffleV2_img
+python train_online.py --epochs 200 --lr_decay_epochs 60,120,160 --dataset caltech256 --num_class 256 --dataset_test_percent 0.25 --batch_size 64 --learning_rate 0.1 --lr_decay_rate 0.1 --models_list ResNet34_another ShuffleV2_img --distill kdcl --kd_T 2 -t contrast-2-04_01
+
+# 5
+# VGG11_BN_IMG - MobileNetV2_img
+python train_online.py --epochs 200 --lr_decay_epochs 60,120,160 --dataset caltech256 --num_class 256 --dataset_test_percent 0.25 --batch_size 64 --learning_rate 0.1 --lr_decay_rate 0.1 --models_list VGG11_BN_IMG MobileNetV2_img --distill kdcl --kd_T 2 -t contrast-2-05_01
