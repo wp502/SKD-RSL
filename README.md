@@ -7,9 +7,9 @@ pip install -r requirements.txt
 ```
  
 ## Running
-1.Download the dataset and place it in the data folder.
+1.Download the dataset from the original official website and place it in the data folder.
 
-2.Start training with the instructions in the run_sh file.
+2. Start training with the instructions in the run_sh file.
 
 ## Explanation
 
@@ -21,7 +21,7 @@ The meaning explanations of the document are as follows:
 5. train_online.py: Code for online knowledge distillation comparison method;
 6. train_ours_111.py: The code used for training SKD-RSL；
 7. train_ours_ddp.py: Distributed training code, mainly used for training imagenet；
-8. train_student.py: Offline Knowledge Distillation Comparison Method Code；
+8. train_student.py: Offline knowledge distillation domparison method code；
 9. train_teacher.py: Used for training the baseline code；
 10. utils_ddp.py: The utils used in the distributed training process；
 11. utils_train_common_ddp.py: The running parameters and general functions during the distributed training process；
