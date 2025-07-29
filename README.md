@@ -8,6 +8,7 @@ pip install -r requirements.txt
  
 ## Running
 1.Download the dataset and place it in the data folder.
+
 2.Start training with the instructions in the run_sh file.
 
 ## Explanation
